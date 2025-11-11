@@ -25,11 +25,6 @@ export default function Landing() {
           </Link>
         </div>
       </div>
-      <h2 className="text-4xl font-bold underline bg-red-500 p-2 rounded">
-  Hello Tailwind!
-</h2>
-
-
       <footer className="mt-12 text-sm text-gray-500">
         © {new Date().getFullYear()} Article Hub — Crafted with ❤️ by Vikash
       </footer>
