@@ -10,7 +10,7 @@ export default function ArticleView(){
   const nav = useNavigate();
 
   const fetchArticle = async () => {
-    const resp = await fetch(`http://localhost:5000/articles/${id}`, { headers: apiHeaders() });
+    const resp = await fetch(`https://assesment-vikash-1.onrender.com/articles/${id}`, { headers: apiHeaders() });
     const data = await resp.json();
     setArticle(data);
   };
@@ -20,7 +20,7 @@ export default function ArticleView(){
   const handleSummarize = async () => {
     setLoadingSummary(true);
     try {
-      const resp = await fetch(`http://localhost:5000/articles/${id}/summarize`, {
+      const resp = await fetch(`https://assesment-vikash-1.onrender.com/${id}/summarize`, {
         method: 'POST',
         headers: apiHeaders(),
         body: JSON.stringify({ provider: 'openai' }) // or 'gemini'
@@ -37,7 +37,7 @@ export default function ArticleView(){
 
   const handleDelete = async () => {
     if (!confirm('Delete article?')) return;
-    const resp = await fetch(`http://localhost:5000/articles/${id}`, {
+    const resp = await fetch(`https://assesment-vikash-1.onrender.com/articles/${id}`, {
       method: 'DELETE', headers: apiHeaders()
     });
     if (resp.ok) {

@@ -17,7 +17,7 @@ export default function EditArticle() {
     const fetchArticle = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:5000/articles/${id}`, {
+        const response = await axios.get(`https://assesment-vikash-1.onrender.com/articles/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -41,7 +41,7 @@ export default function EditArticle() {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/articles/${id}`,
+        `https://assesment-vikash-1.onrender.com/articles/${id}`,
         {
           title,
           content,

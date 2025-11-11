@@ -22,7 +22,7 @@ export default function CreateArticle() {
 
     try {
       await axios.post(
-        "http://localhost:5000/articles",
+        "https://assesment-vikash-1.onrender.com//articles",
         {
           title,
           content,

@@ -10,7 +10,7 @@ export default function Register() {
 
   const submit = async (e) => {
     e.preventDefault();
-    const resp = await fetch('http://localhost:5000/auth/register', {
+    const resp = await fetch('https://assesment-vikash-1.onrender.com/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password }),

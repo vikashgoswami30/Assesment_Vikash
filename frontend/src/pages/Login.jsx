@@ -15,7 +15,7 @@ export default function AuthForm() {
 
     try {
       if (isLogin) {
-        const response = await axios.post("http://localhost:5000/auth/login", {
+        const response = await axios.post("https://assesment-vikash-1.onrender.com/auth/login", {
           email,
           password,
         });
@@ -24,7 +24,7 @@ export default function AuthForm() {
         alert("Login successful!");
         navigate("/create");
       } else {
-        const response = await axios.post("http://localhost:5000/auth/register", {
+        const response = await axios.post("https://assesment-vikash-1.onrender.com/auth/register", {
           name,
           email,
           password,

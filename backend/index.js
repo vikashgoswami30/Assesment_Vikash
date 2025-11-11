@@ -11,6 +11,11 @@ import adminRoutes from './src/routes/admin.js';
 
 const app = express();
 app.use(cors());
+app.use(cors({
+  origin: "https://my-frontend.onrender.com", 
+  methods: ["GET", "POST", "PUT", "DELETE"],  
+  credentials: true         
+}));
 app.use(express.json());
 
 connectDB();

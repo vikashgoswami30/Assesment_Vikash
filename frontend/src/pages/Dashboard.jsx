@@ -15,7 +15,7 @@ export default function Dashboard() {
 
   const fetchArticles = async () => {
     try {
-      const resp = await fetch("http://localhost:5000/articles", {
+      const resp = await fetch("https://assesment-vikash-1.onrender.com/articles", {
         headers: apiHeaders(),
       });
       const data = await resp.json();
@@ -41,7 +41,7 @@ export default function Dashboard() {
     if (!window.confirm("🗑️ Are you sure you want to delete this article?")) return;
 
     try {
-      const resp = await fetch(`http://localhost:5000/articles/${id}`, {
+      const resp = await fetch(`https://assesment-vikash-1.onrender.com/articles/${id}`, {
         method: "DELETE",
         headers: apiHeaders(),
       });
@@ -62,7 +62,7 @@ export default function Dashboard() {
     setSummaries((prev) => ({ ...prev, [id]: { loading: true, text: "" } }));
 
     try {
-      const resp = await fetch(`http://localhost:5000/articles/${id}/summarize`, {
+      const resp = await fetch(`https://assesment-vikash-1.onrender.com/articles/${id}/summarize`, {
         headers: apiHeaders(),
       });
       const data = await resp.json();
